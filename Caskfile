@@ -18,7 +18,7 @@ cask install opera-next 2> /dev/null
 cask install firefox 2> /dev/null
 cask install firefox-aurora 2> /dev/null
 cask install atom 2> /dev/null
-cask install sublime-text 2> /dev/null
+#cask install sublime-text 2> /dev/null
 cask install the-unarchiver 2> /dev/null
 #cask install torbrowser 2> /dev/null
 cask install transmission 2> /dev/null
