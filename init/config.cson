@@ -1,0 +1,14 @@
+'exception-reporting':
+  'userId': '029ed400-54ba-eb96-f575-b60457f43234'
+'welcome':
+  'showOnStartup': false
+'metrics':
+  'userId': '9a4fccfdf86d45b016438c65a3ee9d19dadbbb23'
+'editor': {}
+'core':
+  'themes': [
+    'atom-light-ui'
+    'atom-light-syntax'
+  ]
+'tree-view':
+  'showOnRightSide': true
