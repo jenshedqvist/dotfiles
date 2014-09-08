@@ -52,19 +52,28 @@ complete -W "NSGlobalDomain" defaults;
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
 
-# Install RVM into a shell session *as a function*
-curl -sSL https://get.rvm.io | bash -s stable
+# Check for RVM (Ruby Version Manager) and run or install
+if [ -s "$HOME/.rvm/scripts/rvm" ]; then
+	# Load RVM into a shell session *as a function*
+  source "$HOME/.rvm/scripts/rvm"
+	# Add RVM to PATH for scripting
+	export PATH="$PATH:$HOME/.rvm/bin"
+else
+  # Install RVM into a shell session *as a function*
+	curl -sSL https://get.rvm.io | bash -s stable
+	# Load RVM into a shell session *as a function*
+	source "$HOME/.rvm/scripts/rvm"
+	# Add RVM to PATH for scripting
+	export PATH="$PATH:$HOME/.rvm/bin"
+fi;
 
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# Add RVM to PATH for scripting
-export PATH="$PATH:$HOME/.rvm/bin"
-
-# Install NVM (Node Version Manager) into shell
-curl https://raw.githubusercontent.com/creationix/nvm/v0.15.0/install.sh | bash
-
-# Active NVM (Node Version Manager) if present
+# Check for NVM (Node Version Manager) and install run or install
 if [ -f $HOME/.nvm/nvm.sh ]; then
+	# Active NVM
+	source ~/.nvm/nvm.sh
+else
+	# Install NVM (Node Version Manager) into shell
+	curl https://raw.githubusercontent.com/creationix/nvm/v0.15.0/install.sh | bash
+	# Active NVV
 	source ~/.nvm/nvm.sh
 fi;
