@@ -60,3 +60,11 @@ curl -sSL https://get.rvm.io | bash -s stable
 
 # Add RVM to PATH for scripting
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# Install NVM (Node Version Manager) into shell
+curl https://raw.githubusercontent.com/creationix/nvm/v0.15.0/install.sh | bash
+
+# Active NVM (Node Version Manager) if present
+if [ -f $HOME/.nvm/nvm.sh ]; then
+	source ~/.nvm/nvm.sh
+fi;
