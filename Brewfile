@@ -58,6 +58,7 @@ install webkit2png
 #install xpdf
 #install zopfli
 install heroku
+install phantomjs
 
 install homebrew/versions/lua52
 
