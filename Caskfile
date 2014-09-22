@@ -30,3 +30,5 @@ cask install slack 2> /dev/null
 cask install google-drive 2> /dev/null
 cask install spotify 2> /dev/null
 cask install github 2> /dev/null
+cask install skype 2> /dev/null
+cask install usb-overdrive 2> /dev/null
