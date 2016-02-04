@@ -35,6 +35,9 @@ install homebrew/dupes/grep
 install homebrew/dupes/screen
 install homebrew/php/php55 --with-gmp
 
+# Install Git Flow for development
+install git-flow
+
 # Install other useful binaries
 #install ack
 #install bfg
